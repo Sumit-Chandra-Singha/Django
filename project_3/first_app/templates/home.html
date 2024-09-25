@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Django Template Filters</h1>
+    <h3>add : {{ number | add:"4"}}</h3>
+    <h3>addslaces : {{ str | addslashes }}</h3>
+    <h3>capfirst : {{ name | capfirst }}</h3>
+    <h3>center : "{{ title | center:"15" }}"</h3>
+    <h3>cut : {{ name | cut:" " }}</h3>
+    <h3>date : {{ date | date:"D d M Y" }}</h3>
+    <h3>default : {{ value | default:"nothing" }}</h3>
+    <h3>dictsort : {{ val | dictsort:"name" }}</h3>
+    <h3>first : {{ val | first }}</h3>
+    <h3>join : {{ lst | join:" \/ " }}</h3>
+    <h3>last : {{ lst | last }} </h3>
+    <h3>length : {{ lst | length }} </h3>
+    <h3>linenumbers : {{ lines | linenumbers }} </h3>
+    <h3>lower : {{ upper | lower }} </h3>
+    <h3>make_list : {{ name | make_list }} </h3>
+    <h3>random : {{ lst | random }} </h3>
+    <h3>title : {{ name | title }} </h3>
+</body>
+</html>
