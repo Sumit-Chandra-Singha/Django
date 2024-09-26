@@ -31,4 +31,18 @@ class validform(forms.Form):
     # age = forms.IntegerField(validators=[validators.MinValueValidator(10, message="Enter higher value"), validators.MaxValueValidator(50, message="Enter less value")])
     # file = forms.FileField(validators=[validators.FileExtensionValidator(allowed_extensions='pdf', message='only pdf is allowed')])
 
+
+class PasswordValidation(forms.Form):
+    name = forms.CharField(label="",widget= forms.TextInput(attrs={'placeholder':'Enter your name'}))
+    password = forms.CharField(label="",widget= forms.PasswordInput(attrs={'placeholder':'Enter Password'}))
+    conf_password = forms.CharField(label="",widget= forms.PasswordInput(attrs={'placeholder':'Re-Enter Password'}))
     
+    def clean(self):
+        cleaned_data = super().clean()
+        vname = self.cleaned_data['name']    
+        pass1 = self.cleaned_data['password']
+        pass2 = self.cleaned_data['conf_password']
+        if len(vname) < 10:
+            raise forms.ValidationError("Name must be at least 10 characters.")     
+        if pass1 != pass2:
+            raise forms.ValidationError("Password didn't match.")
