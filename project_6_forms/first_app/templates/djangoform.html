@@ -2,7 +2,7 @@
 {% block content %}
 {% load crispy_forms_tags %}
 <h1>Django Form</h1>    
-<form method="post" action="" style="width: 50%; height: 500px; margin: auto">
+<form method="post" action="" style="width: 50%; height: 500px; margin: auto" class="pt-5" enctype="multipart/form-data">
     {% csrf_token %}
     {{form | crispy}}
     
