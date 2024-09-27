@@ -13,7 +13,7 @@ class StudentForm(forms.ModelForm):
         }
         widgets = {
             'name' : forms.TextInput(attrs={'class' : 'btn-primary'}),
-            'roll': forms.PasswordInput()
+            # 'roll': forms.PasswordInput()
         }
         help_texts = {
             'name': 'write full name'
