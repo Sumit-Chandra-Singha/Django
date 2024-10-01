@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Home.html</h1>
+{% comment %} <h1>Home.html</h1> {% endcomment %}
 <div class="posts d-flex flex-wrap justify-content-center p-3">
     {% for i in data %}
       <div class="card" style="width: 15rem; margin: 5px; padding: 5px;">
@@ -10,7 +10,7 @@
             <p class="card-text">{{i.content}}.</p>
         </div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">Author: {{i.author.user}}</li>
+            <li class="list-group-item">Author: {{i.author.username}}</li>
             <li class="list-group-item">Catagory: 
                 {% for c in i.catagory.all %}
                 <div class="btn btn-warning">
